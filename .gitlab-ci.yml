@@ -1,0 +1,39 @@
+stages:
+  - pull_code
+  - install
+  - deploy
+pull_code:
+  stage: pull_code
+  only:
+    - develop
+    - master
+  script:
+    - cd /data/server
+    # - sudo git stash
+    - sudo git pull
+    # - sudo git stash pop
+install:
+  stage: install
+  only:
+    - develop
+    - master
+  script:
+    - sudo pip install flask
+    - sudo pip install flask-cors
+    - sudo pip install mysql-python
+    # - sudo pip install image
+    - sudo pip install Pillow
+    - sudo pip install nltk
+    - sudo pip install pattern
+    - sudo pip install numpy
+    - sudo pip install requests
+    - sudo pip install BeautifulSoup4
+    - sudo pip install Flask-Session
+deploy:
+  stage: deploy
+  only:
+    - develop
+    - master
+  script:
+    # - sudo supervisord
+    - sudo supervisorctl -c /usr/local/etc/supervisord.conf restart all
