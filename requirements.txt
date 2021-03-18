@@ -19,7 +19,7 @@ nltk==3.2.5
 np==1.0.2
 numpy==1.14.2
 Pattern==2.6
-Pillow==5.1.0
+Pillow==8.1.1
 pycrypto==2.6.1
 pycurl==7.43.0
 pyliblzma==0.5.3
