@@ -10,7 +10,7 @@ idna==2.6
 image==1.5.20
 iotop==0.6
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 JPype1==0.6.2
 MarkupSafe==1.0
 meld3==1.0.2
